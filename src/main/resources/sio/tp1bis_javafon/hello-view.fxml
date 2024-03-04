@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sio.tp1bis_javafon.HelloController">
+   <children>
+      <AnchorPane fx:id="apDebut" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <ImageView fitHeight="300.0" fitWidth="300.0" layoutX="150.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/Interface/txtChoix.png" />
+               </image>
+            </ImageView>
+            <HBox alignment="CENTER" layoutX="50.0" layoutY="200.0" prefHeight="100.0" prefWidth="500.0">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="100.0" onMouseClicked="#chooseEau" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/Allie/Face/eauAllie.gif" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="100.0" fitWidth="100.0" onMouseClicked="#chooseFeu" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/Allie/Face/feuAllie.gif" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <ImageView fitHeight="100.0" fitWidth="100.0" onMouseClicked="#choosePlante" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/Allie/Face/planteAllie.gif" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="apChoix" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <ImageView fitHeight="400.0" fitWidth="600.0" layoutX="-139.0" onMouseClicked="#goToPokedex" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/Interface/pokedex.gif" />
+               </image>
+            </ImageView>
+            <AnchorPane layoutX="394.0" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="400.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/Interface/fond.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="104.0" layoutY="286.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/Adversaire/eauAdversaire.gif" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="150.0" layoutX="29.0" layoutY="14.0" onMouseClicked="#goToCombat" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/Interface/pointInterro.gif" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="100.0" fitWidth="100.0" layoutY="286.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/Adversaire/feuAdversaire.gif" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="54.0" layoutY="186.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/Adversaire/planteAdversaire.gif" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="251.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/Interface/fleche.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="100.0" fitWidth="73.0" layoutX="6.0" layoutY="7.0" onMouseClicked="#goToDebut" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/Interface/changement.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="apPokedex" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <ImageView fx:id="imgPokedexAllieFace" fitHeight="150.0" fitWidth="200.0" layoutX="48.0" layoutY="204.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/Allie/Face/eauAllie.gif" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgPokedexAllieStat" fitHeight="343.0" fitWidth="332.0" layoutX="241.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/Interface/eauStat.PNG" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgPokedexCroix" fitHeight="60.0" fitWidth="47.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#goToChoix" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/Interface/croix.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgPokedexAllieNom" fitHeight="60.0" fitWidth="500.0" layoutX="33.0" layoutY="110.0" onMouseClicked="#goToChoix" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/Interface/eauNom.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+      <AnchorPane fx:id="apCombat" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <ImageView fx:id="imgAllie" fitHeight="150.0" fitWidth="200.0" layoutX="63.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/Allie/Dos/feuAllieBis.png" />
+               </image>
+            </ImageView>
+            <StackPane layoutY="250.0" prefHeight="150.0" prefWidth="600.0">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/Interface/fondSort.png" />
+                     </image>
+                  </ImageView>
+                  <VBox prefHeight="150.0" prefWidth="600.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="75.0" prefWidth="601.0">
+                           <children>
+                              <AnchorPane prefHeight="60.0" prefWidth="250.0">
+                                 <children>
+                                    <ImageView fx:id="imgFondSort1" fitHeight="60.0" fitWidth="250.0" onMouseClicked="#lanceSort2" pickOnBounds="true" preserveRatio="true" x="5.0" y="10.0">
+                                       <image>
+                                          <Image url="@../../images/Interface/eauFond.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="imgTypeSort1" fitHeight="50.0" fitWidth="50.0" layoutY="5.0" onMouseClicked="#lanceSort2" pickOnBounds="true" preserveRatio="true" x="5.0" y="10.0">
+                                       <image>
+                                          <Image url="@../../images/Interface/physiqueLogo.png" />
+                                       </image>
+                                    </ImageView>
+                                    <VBox alignment="CENTER" layoutX="60.0" layoutY="20.0" prefHeight="25.0" prefWidth="180.0">
+                                       <children>
+                                          <Label fx:id="lblNomSort1" prefHeight="25.0" text="Lance Soleil" textFill="WHITE">
+                                             <font>
+                                                <Font name="Consolas Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <HBox alignment="BOTTOM_CENTER" prefHeight="35.0" prefWidth="180.0">
+                                             <children>
+                                                <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../images/Interface/puissanceLogo.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label fx:id="lblPuissanceSort1" alignment="CENTER" prefHeight="25.0" text="100" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="Consolas Bold" size="15.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets left="10.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../images/Interface/precisionLogo.png" />
+                                                   </image>
+                                                   <HBox.margin>
+                                                      <Insets left="30.0" />
+                                                   </HBox.margin>
+                                                </ImageView>
+                                                <Label fx:id="lblPrecisionSort1" alignment="CENTER" prefHeight="25.0" text="100" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="Consolas Bold" size="15.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets left="10.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <AnchorPane layoutX="5.0" layoutY="10.0" onMouseClicked="#lanceSort1" prefHeight="60.0" prefWidth="250.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="60.0" prefWidth="250.0">
+                                 <children>
+                                    <ImageView fx:id="imgFondSort2" fitHeight="60.0" fitWidth="250.0" onMouseClicked="#lanceSort1" pickOnBounds="true" preserveRatio="true" x="5.0" y="10.0">
+                                       <image>
+                                          <Image url="@../../images/Interface/planteFond.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="imgTypeSort2" fitHeight="50.0" fitWidth="50.0" layoutY="5.0" onMouseClicked="#lanceSort2" pickOnBounds="true" preserveRatio="true" x="5.0" y="10.0">
+                                       <image>
+                                          <Image url="@../../images/Interface/specialeLogo.png" />
+                                       </image>
+                                    </ImageView>
+                                    <VBox alignment="CENTER" layoutX="60.0" layoutY="20.0" prefHeight="25.0" prefWidth="180.0">
+                                       <children>
+                                          <Label fx:id="lblNomSort2" prefHeight="25.0" text="Lance Soleil" textFill="WHITE">
+                                             <font>
+                                                <Font name="Consolas Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <HBox alignment="BOTTOM_CENTER" prefHeight="35.0" prefWidth="180.0">
+                                             <children>
+                                                <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../images/Interface/puissanceLogo.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label fx:id="lblPuissanceSort2" alignment="CENTER" prefHeight="25.0" text="100" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="Consolas Bold" size="15.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets left="10.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../images/Interface/precisionLogo.png" />
+                                                   </image>
+                                                   <HBox.margin>
+                                                      <Insets left="30.0" />
+                                                   </HBox.margin>
+                                                </ImageView>
+                                                <Label fx:id="lblPrecisionSort2" alignment="CENTER" prefHeight="25.0" text="100" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="Consolas Bold" size="15.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets left="10.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <AnchorPane layoutX="5.0" layoutY="10.0" onMouseClicked="#lanceSort2" prefHeight="60.0" prefWidth="250.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="75.0" prefWidth="600.0">
+                           <children>
+                              <AnchorPane prefHeight="60.0" prefWidth="250.0">
+                                 <children>
+                                    <ImageView fx:id="imgFondSort3" fitHeight="60.0" fitWidth="250.0" onMouseClicked="#lanceSort4" pickOnBounds="true" preserveRatio="true" x="5.0" y="5.0">
+                                       <image>
+                                          <Image url="@../../images/Interface/normalFond.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="imgTypeSort3" fitHeight="50.0" fitWidth="50.0" onMouseClicked="#lanceSort2" pickOnBounds="true" preserveRatio="true" x="5.0" y="10.0">
+                                       <image>
+                                          <Image url="@../../images/Interface/soinLogo.png" />
+                                       </image>
+                                    </ImageView>
+                                    <VBox alignment="CENTER" layoutX="60.0" layoutY="15.0" prefHeight="25.0" prefWidth="180.0">
+                                       <children>
+                                          <Label fx:id="lblNomSort3" prefHeight="25.0" text="Lance Soleil" textFill="WHITE">
+                                             <font>
+                                                <Font name="Consolas Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <HBox alignment="BOTTOM_CENTER" prefHeight="35.0" prefWidth="180.0">
+                                             <children>
+                                                <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../images/Interface/puissanceLogo.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label fx:id="lblPuissanceSort3" alignment="CENTER" prefHeight="25.0" text="100" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="Consolas Bold" size="15.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets left="10.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../images/Interface/precisionLogo.png" />
+                                                   </image>
+                                                   <HBox.margin>
+                                                      <Insets left="30.0" />
+                                                   </HBox.margin>
+                                                </ImageView>
+                                                <Label fx:id="lblPrecisionSort3" alignment="CENTER" prefHeight="25.0" text="100" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="Consolas Bold" size="15.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets left="10.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <AnchorPane layoutX="5.0" layoutY="5.0" onMouseClicked="#lanceSort3" prefHeight="60.0" prefWidth="250.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="60.0" prefWidth="250.0">
+                                 <children>
+                                    <ImageView fx:id="imgFondSort4" fitHeight="60.0" fitWidth="250.0" onMouseClicked="#lanceSort3" pickOnBounds="true" preserveRatio="true" x="5.0" y="5.0">
+                                       <image>
+                                          <Image url="@../../images/Interface/feuFond.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="imgTypeSort4" fitHeight="50.0" fitWidth="50.0" onMouseClicked="#lanceSort2" pickOnBounds="true" preserveRatio="true" x="5.0" y="10.0">
+                                       <image>
+                                          <Image url="@../../images/Interface/physiqueLogo.png" />
+                                       </image>
+                                    </ImageView>
+                                    <VBox alignment="CENTER" layoutX="60.0" layoutY="15.0" prefHeight="25.0" prefWidth="180.0">
+                                       <children>
+                                          <Label fx:id="lblNomSort4" prefHeight="25.0" text="Lance Soleil" textFill="WHITE">
+                                             <font>
+                                                <Font name="Consolas Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <HBox alignment="BOTTOM_CENTER" prefHeight="35.0" prefWidth="180.0">
+                                             <children>
+                                                <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../images/Interface/puissanceLogo.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label fx:id="lblPuissanceSort4" alignment="CENTER" prefHeight="25.0" text="100" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="Consolas Bold" size="15.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets left="10.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../images/Interface/precisionLogo.png" />
+                                                   </image>
+                                                   <HBox.margin>
+                                                      <Insets left="30.0" />
+                                                   </HBox.margin>
+                                                </ImageView>
+                                                <Label fx:id="lblPrecisionSort4" alignment="CENTER" prefHeight="25.0" text="100" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="Consolas Bold" size="15.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets left="10.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <AnchorPane layoutX="5.0" layoutY="5.0" onMouseClicked="#lanceSort4" prefHeight="60.0" prefWidth="250.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </StackPane>
+            <ImageView fx:id="imgAdversaire" fitHeight="150.0" fitWidth="200.0" layoutX="375.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/Adversaire/planteAdversaire.gif" />
+               </image>
+            </ImageView>
+            <VBox alignment="CENTER" prefHeight="100.0" prefWidth="300.0">
+               <children>
+                  <Label fx:id="lblAllieNom" alignment="BOTTOM_CENTER" prefHeight="50.0" prefWidth="300.0" text="azertyui">
+                     <font>
+                        <Font name="Consolas Bold" size="26.0" />
+                     </font>
+                  </Label>
+                  <HBox prefHeight="50.0" prefWidth="300.0">
+                     <children>
+                        <Label fx:id="lblAlliePvAct" alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="300.0" text="1000">
+                           <font>
+                              <Font name="Consolas Bold" size="26.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="50.0" prefWidth="50.0" text="/">
+                           <font>
+                              <Font name="Consolas Bold" size="26.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="lblAlliePvMax" prefHeight="50.0" prefWidth="300.0" text="1000">
+                           <font>
+                              <Font name="Consolas Bold" size="26.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="300.0" layoutY="150.0" prefHeight="100.0" prefWidth="300.0">
+               <children>
+                  <Label fx:id="lblAdversaireNom" alignment="BOTTOM_CENTER" prefHeight="50.0" prefWidth="300.0" text="azertyui">
+                     <font>
+                        <Font name="Consolas Bold" size="26.0" />
+                     </font>
+                  </Label>
+                  <HBox prefHeight="50.0" prefWidth="300.0">
+                     <children>
+                        <Label fx:id="lblAdversairePvAct" alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="300.0" text="1000">
+                           <font>
+                              <Font name="Consolas Bold" size="26.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="50.0" prefWidth="50.0" text="/">
+                           <font>
+                              <Font name="Consolas Bold" size="26.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="lblAdversairePvMax" prefHeight="50.0" prefWidth="300.0" text="1000">
+                           <font>
+                              <Font name="Consolas Bold" size="26.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
