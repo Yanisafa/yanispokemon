@@ -72,7 +72,7 @@ public class Pokemon {
             Dans le cas contraire, la cible ne prend pas de dégât et la fonction devra retourner 0.
             Vous pouvez vous aider de la fonction alea() qui retourne un nombre aléatoire compris entre 0 et 100.
         */
-        if()
+        if(s.)
         return 0;
     }
     public void degatsSubis (int degat, boolean phy)
