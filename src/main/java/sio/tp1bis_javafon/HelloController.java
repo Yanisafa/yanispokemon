@@ -247,7 +247,8 @@ public class HelloController implements Initializable {
         /* FACILE /0,5
         Cette fonction devra mettre en avant l'anchorPane apChoix (prendre exemple sur la fonction goToDebut.
          */
-
+        clearAll();
+        changeAP(apChoix);
     }
 
     @FXML
@@ -259,7 +260,8 @@ public class HelloController implements Initializable {
     }
 
     @FXML
-    public void goToDebut(Event event) {
+    public void goToDebut(Event event)
+    {
         changeAP(apDebut);
     }
 

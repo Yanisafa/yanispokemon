@@ -68,6 +68,14 @@ public class Pokemon {
     }
     public void degatsSubis (int degat, boolean phy)
     {
+        int facteur;
+        if(phy == true){
+            this.pvActuel = degat - facteur;
+            defense = 0;
+        }
+        else{
+
+        }
         /*  MOYENNE /1
             Cette fonction, qui prend en paramètre un entier degat et un boolean phy.
             Le Pokemon devra perdre des pvActuel par rapport à degatSubi comme suit : degatSubi = degat - facteur.
@@ -82,6 +90,7 @@ public class Pokemon {
         /*  FACILE /0,5
             Cette fonction affectera à l'attribut pvActuel la valeur de pvMax.
         */
+        this.pvActuel = this.pvMax;
     }
     public boolean testMort()
     {
@@ -97,6 +106,12 @@ public class Pokemon {
             Cette fonction devra augmenter les pvActuel de 25.
             Attention, si les pvActuel dépassent les pvMax, il faudra réaffecter à pvActuel la valeur de pvMax.
          */
+        this.pvActuel += 25;
+        if(pvActuel > pvMax){
+            this.pvActuel = this.pvMax;
+        }
+
+
     }
     public String getImgStats() {
         return imgStats;
