@@ -39,6 +39,14 @@ public class Pokemon {
 
     public int degatsTotaux (Sort s)
     {
+        int facteur;
+        if(s.isEstPhysique()){
+            facteur =  attaque;
+
+        }
+        else{
+            facteur = attaqueSpeciale;
+        }
         /*  MOYENNE /1
             Cette fonction, qui prend un sort en paramètre un Sort s, va retourner un entier correspondant aux dégâts totaux.
             degatsTotaux = puissance du sort * facteur
@@ -64,17 +72,23 @@ public class Pokemon {
             Dans le cas contraire, la cible ne prend pas de dégât et la fonction devra retourner 0.
             Vous pouvez vous aider de la fonction alea() qui retourne un nombre aléatoire compris entre 0 et 100.
         */
+        if()
         return 0;
     }
     public void degatsSubis (int degat, boolean phy)
     {
         int facteur;
         if(phy == true){
-            this.pvActuel = degat - facteur;
-            defense = 0;
+            facteur = this.defense;
+            facteur -= degat;
         }
         else{
+            facteur = this.defenseSpeciale;
+            facteur -= degat;
 
+        }
+        if(defense <= 0){
+            this.pvActuel -= degat;
         }
         /*  MOYENNE /1
             Cette fonction, qui prend en paramètre un entier degat et un boolean phy.
@@ -98,7 +112,13 @@ public class Pokemon {
             Cette fonction va tester si le Pokemon est mort (pvActuel <= 0)
             S'il est mort, retourner true, sinon retourner false.
          */
-        return true;
+        if(pvActuel<=0){
+            return true;
+        }
+        else{
+            return false;
+        }
+
     }
     public void seSoigne()
     {

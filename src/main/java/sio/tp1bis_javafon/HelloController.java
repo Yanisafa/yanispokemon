@@ -217,6 +217,13 @@ public class HelloController implements Initializable {
         Cette fonction devra mettre à jour les label lblAlliePvAct, lblAlliePvMax, lblAdversairePvAct, lblAdversairePvMax
         vis-à-vis des Pokemon allie et adversaire.
          */
+        lblAlliePvAct.setText(String.valueOf(allie.getPvActuel()));
+        lblAdversairePvAct.setText(String.valueOf(adversaire.getPvActuel()));
+        if(allie.getPvActuel() <= 0) {
+            System.out.println("mort");
+            clearAll();
+            changeAP(apDebut);
+        }
     }
     public void loadSort(Label nom, Label puissance, Label precision, ImageView type, ImageView fond, Sort sort)
     {
@@ -314,6 +321,9 @@ public class HelloController implements Initializable {
     }
     public void mortAllie(boolean b)
     {
+        if(b == true){
+            System.out.println("Votre " allie.getNom()" succombé à ses blessures face à "adversaire.getNom());
+            goToDebut();
         /* FACILE /0,5
         Cette fonction, prenant un boolean b en paramètre, devra afficher une alert avec un message indiquant le nom du Pokemon allie et le
         nom du Pokemon adversaire si le b est true.
@@ -323,6 +333,10 @@ public class HelloController implements Initializable {
     }
     public void mortAdversaire(boolean b)
     {
+        if(b == true){
+            System.out.println(adversaire.getNom() " a succombé à ses blessures face à votre "allie.getNom());
+            goToDebut();
+        }
         /* FACILE /0,5
         Cette fonction, prenant un boolean b en paramètre, devra afficher une alert avec un message indiquant le nom du Pokemon allie et le
         nom du Pokemon adversaire si le b est true.
