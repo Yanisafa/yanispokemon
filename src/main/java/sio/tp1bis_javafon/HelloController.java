@@ -319,10 +319,9 @@ public class HelloController implements Initializable {
         return null;
 
     }
-    public void mortAllie(boolean b)
-    {
-        if(b == true){
-            System.out.println("Votre " allie.getNom()" succombé à ses blessures face à "adversaire.getNom());
+    public void mortAllie(boolean b) {
+        if (b == true) {
+            System.out.println("Votre "allie.getNom()" succombé à ses blessures face à "adversaire.getNom());
             goToDebut();
         /* FACILE /0,5
         Cette fonction, prenant un boolean b en paramètre, devra afficher une alert avec un message indiquant le nom du Pokemon allie et le
@@ -330,6 +329,7 @@ public class HelloController implements Initializable {
         Par ailleurs, il faudra ensuite appeler la fonction goToDebut() si b est true.
         EXEMPLE DE PRESENTATION : " Votre Tortank a succombé à ses blessures face à Arcanin"
         */
+        }
     }
     public void mortAdversaire(boolean b)
     {

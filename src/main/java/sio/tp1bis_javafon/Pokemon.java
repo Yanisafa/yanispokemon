@@ -72,8 +72,12 @@ public class Pokemon {
             Dans le cas contraire, la cible ne prend pas de dégât et la fonction devra retourner 0.
             Vous pouvez vous aider de la fonction alea() qui retourne un nombre aléatoire compris entre 0 et 100.
         */
-        if(s.)
-        return 0;
+        int precision = alea();
+        int pourcentage = vitesse+s.getPrecision();
+        if(alea() < pourcentage)
+            return 0;
+
+        return degatsTotaux(s);
     }
     public void degatsSubis (int degat, boolean phy)
     {
@@ -98,6 +102,14 @@ public class Pokemon {
                 sinon si phy == false, alors nous devrons prendre en compte l'attribut defenseSpeciale
             /!\ Vous ne pouvez pas faire subir de degatSubi négatif.
         */
+        if(phy){
+            if(degat - this.defense > 0)
+                this.pvActuel -= (degat - this.defense);
+        }
+        else {
+            if(degat - this.defenseSpeciale > 0)
+                this.pvActuel -= (degat - this.defenseSpeciale);
+        }
     }
     public void fullPV()
     {
